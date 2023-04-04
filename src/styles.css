@@ -30,7 +30,8 @@ li:first-letter {
 }
 
 .btn-primary {
-  color: violet;
+  color: black;
+  background-color: violet;
 }
 
 .weather-app-wrapper {
