@@ -32,10 +32,12 @@ li:first-letter {
 .btn-primary {
   color: black;
   background-color: violet;
+  border-color: black;
 }
 .btn-primary:hover {
   color: black;
   background-color: transparent;
+  border-color: black;
 }
 
 .weather-app-wrapper {
