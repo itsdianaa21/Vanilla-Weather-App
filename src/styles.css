@@ -33,6 +33,10 @@ li:first-letter {
   color: black;
   background-color: violet;
 }
+.btn-primary:hover {
+  color: black;
+  background-color: transparent;
+}
 
 .weather-app-wrapper {
   max-width: 600px;
