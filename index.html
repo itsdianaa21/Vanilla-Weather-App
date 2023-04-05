@@ -18,37 +18,37 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="vanilla-weather-app">
-          <form>
+          <form id="search-form">
             <input
               type="search"
               placeholder="Enter a city..."
               class="form-control search-input"
+              id="city-input"
             />
             <div class="col-3 search-button">
               <input type="submit" class="btn btn-primary" value="Search" />
             </div>
           </form>
           <div class="overview">
-            <h1>Houston</h1>
+            <h1 id="city">Houston</h1>
             <ul>
-              <li>Monday 10:00</li>
-              <li>Cloudy</li>
+              <li id="date">Monday 10:00</li>
+              <li id="description">Cloudy</li>
             </ul>
             <div class="row">
               <div class="col-6">
-                <span class="temperature">12</span>
-                <span class="unit">°C</span>|
-                <span class="unit">°F</span>
+                <span class="temp" id="temperature">12</span>
+                <span class="unit" id="units">°C</span>|
+                <span class="unit" id="units">°F</span>
               </div>
             </div>
             <div class="col-6">
               <ul class="list-info">
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 0%</li>
-                <li>Wind: 5km/h</li>
+                <li>Humidity:<span id="humidity"></span> %</li>
+                <li>Wind:<span id="wind"></span> km/h</li>
               </ul>
             </div>
-            <div class="row WeatherForecast">
+            <div class="row WeatherForecast" id="forecast">
               <div class="col-2">
                 <div class="forecast-date">Tue</div>
                 <div class="forecast-temperature">
