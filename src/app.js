@@ -44,9 +44,6 @@ function displayForecast(response) {
       <div class="col-2">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <div class="weather-forecast-temperatures">
-        <img src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png" alt="" width="42"/>
           <span class="weather-forecast-temperature-max"> ${Math.round(
             forecastDay.temp.max
           )}° </span>
@@ -79,21 +76,12 @@ function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-
   getForecast(response.data.coord);
 }
 
@@ -111,5 +99,4 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
 search("Houston");
