@@ -18,28 +18,38 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="vanilla-weather-app">
-          <form id="search-form">
-            <input
-              type="search"
-              placeholder="Enter a city..."
-              class="form-control search-input"
-              id="city-input"
-            />
-            <div class="col-3 search-button">
-              <input type="submit" class="btn btn-primary" value="Search" />
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control search-input"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" class="btn btn-primary" value="Search" />
+              </div>
             </div>
           </form>
           <div class="overview">
             <h1 id="city">Houston</h1>
             <ul>
-              <li id="date">Monday 10:00</li>
-              <li id="description">Cloudy</li>
+              <li id="date"></li>
+              <li id="description"></li>
             </ul>
             <div class="row">
               <div class="col-6">
-                <span class="temp" id="temperature">12</span>
-                <span class="unit" id="units">°C</span>|
-                <span class="unit" id="units">°F</span>
+                <div class="clearfix weather-temperature">
+                  <img src="" alt="Clear" id="icon" class="float-left" />
+                  <strong id="temperature"></strong>
+                  <span class="unit" id="units">
+                    <a href="#" id="celsius-link">°C | </a>
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
               </div>
             </div>
             <div class="col-6">
